@@ -100,7 +100,23 @@ check_update(){
 		echo -ne "${GREEN}up to date\n${WHITE}" ; sleep .5
 	fi
 }
+## Function to open Telegram channel
+open_telegram_channel() {
+    echo -e "\n${GREEN}[${WHITE}+${GREEN}] Opening Telegram Channel..."
+    # Replace the URL with your Telegram channel URL
+    xdg-open "https://t.me/MPTrickzs"  # Adjust based on your system or environment
+}
 
+## Main function to display banner and perform other operations
+main() {
+    clear
+    banner
+    open_telegram_channel
+    # Other operations or functions can follow here
+}
+
+## Call the main function to start the script
+main
 ## Check Internet Status
 check_status() {
 	echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Internet Status : "
